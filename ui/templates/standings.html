@@ -1,0 +1,17 @@
+{% from "badge.html" import team_badge %}
+<div class="rounded-3xl bg-white border border-[#F0E6C8] p-6">
+  <div class="text-2xl font-semibold mb-4">{{ title }}</div>
+  <table class="w-full text-[15px]">
+    <thead><tr class="text-sm text-[#6B5A1E] text-left"><th class="pb-2">#</th><th class="pb-2">Tim</th><th class="pb-2 text-right">Poin</th><th class="pb-2 text-right">Top 8</th></tr></thead>
+    <tbody>
+    {% for r in rows %}
+      <tr class="border-t border-[#F0E6C8]">
+        <td class="py-3 text-[#6B5A1E] w-8">{{ loop.index }}</td>
+        <td class="py-3"><div class="flex items-center gap-3 font-medium">{{ team_badge(r["Tim"], 32) }}{{ r["Tim"] }}</div></td>
+        <td class="py-3 text-right font-bold">{{ "%.1f"|format(r["Rata-rata poin"]) }}</td>
+        <td class="py-3 text-right"><span class="inline-block rounded-full px-3 py-1 text-sm font-semibold" style="background:rgba(255,184,0,{{ 0.15 + 0.85*r['Top 8'] }})">{{ "%.0f"|format(r["Top 8"]*100) }}%</span></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>

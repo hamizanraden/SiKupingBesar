@@ -1,0 +1,13 @@
+{% from "badge.html" import team_badge %}
+<div class="rounded-3xl bg-white border border-[#F0E6C8] p-6">
+  <div class="flex justify-between items-center font-semibold text-lg mb-4">
+    <span class="flex items-center gap-3">{{ team_badge(home, 40) }}{{ home }}</span>
+    <span class="flex items-center gap-3">{{ away }}{{ team_badge(away, 40) }}</span>
+  </div>
+  <div class="flex gap-3">
+    <div class="flex-1 rounded-2xl py-4 text-center" style="background:#FFC400"><div class="text-3xl font-bold">{{ "%.1f"|format(w*100) }}%</div><div class="text-sm">Menang {{ home }}</div></div>
+    <div class="flex-1 rounded-2xl py-4 text-center bg-[#F6EDCB]"><div class="text-3xl font-bold">{{ "%.1f"|format(d*100) }}%</div><div class="text-sm">Seri</div></div>
+    <div class="flex-1 rounded-2xl py-4 text-center bg-[#F6EDCB]"><div class="text-3xl font-bold">{{ "%.1f"|format(l*100) }}%</div><div class="text-sm">Menang {{ away }}</div></div>
+  </div>
+  <div class="text-sm text-[#6B5A1E] mt-3">Ekspektasi gol: {{ home }} {{ "%.2f"|format(lh) }} &ndash; {{ "%.2f"|format(la) }} {{ away }}</div>
+</div>

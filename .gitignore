@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.vscode/
+.env
+# dataset asli: hapus baris ini kalau lisensi datanya mengizinkan dibagikan
+data/matches.csv

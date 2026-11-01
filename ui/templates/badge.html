@@ -1,0 +1,5 @@
+{% macro team_badge(name, size=36) %}
+{% set b = badge(name) %}
+{% if b.logo %}<img src="{{ b.logo }}" alt="{{ name }}" style="width:{{ size }}px;height:{{ size }}px" class="rounded-full object-contain flex-none">
+{% else %}<span class="inline-flex items-center justify-center rounded-full text-white font-bold flex-none" style="width:{{ size }}px;height:{{ size }}px;background:{{ b.color }};font-size:{{ (size*0.33)|int }}px">{{ b.initials }}</span>{% endif %}
+{% endmacro %}
