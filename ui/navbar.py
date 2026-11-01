@@ -5,17 +5,24 @@ _CSS = """
 <style>
 /* bar penuh selebar layar, isinya tetap sejajar dengan konten (maks 1400px) */
 .st-key-navbar {
-    width: 100vw; margin-left: calc(50% - 50vw); box-sizing: border-box;
+    width: 100vw; max-width: 100vw; margin-left: calc(50% - 50vw); box-sizing: border-box;
     background: linear-gradient(90deg, #FFD21F, #FFB800);
     padding: 14px max(32px, calc((100vw - 1400px) / 2 + 32px));
     margin-bottom: 1.75rem;
 }
-.st-key-navbar [data-testid="stHorizontalBlock"] { gap: 6px !important; flex-wrap: nowrap; align-items: center; }
+/* wrap: di layar sempit menu turun ke baris berikutnya, tidak terpotong */
+.st-key-navbar [data-testid="stHorizontalBlock"] {
+    gap: 6px !important; row-gap: 6px !important; flex-wrap: wrap !important; align-items: center;
+}
 .st-key-navbar [data-testid="stColumn"] { flex: 0 0 auto !important; width: auto !important; min-width: 0 !important; }
 .st-key-navbar [data-testid="stColumn"]:first-child { margin-right: 28px; }
+/* Streamlit memberi margin-bottom -16px pada markdown; itu membuat tinggi logo terpotong
+   dan isinya menimpa baris menu saat navbar wrap. */
+.st-key-navbar [data-testid="stMarkdownContainer"] { margin-bottom: 0 !important; }
 
 .st-key-navbar [data-testid="stPageLink-NavLink"] {
-    border-radius: 999px; padding: .6rem 1.3rem; justify-content: center; white-space: nowrap;
+    border-radius: 999px; padding: .6rem 1.3rem; justify-content: center;
+    white-space: nowrap; max-width: 100%;
 }
 .st-key-navbar [data-testid="stPageLink-NavLink"] p,
 .st-key-navbar [data-testid="stPageLink-NavLink"] span { color: #1A1400 !important; font-size: 1.05rem; font-weight: 500; margin: 0; }
@@ -25,6 +32,25 @@ _CSS = """
 .st-key-nav-active [data-testid="stPageLink-NavLink"]:hover { background: #1A1400; }
 .st-key-nav-active [data-testid="stPageLink-NavLink"] p,
 .st-key-nav-active [data-testid="stPageLink-NavLink"] span { color: #FFD21F !important; font-weight: 600; }
+
+/* tablet: logo satu baris penuh, menu membungkus dan melebar mengisi baris */
+@media (max-width: 900px) {
+    .st-key-navbar { padding: 10px 16px; margin-bottom: 1rem; }
+    .st-key-navbar [data-testid="stColumn"]:first-child {
+        flex: 1 0 100% !important; margin-right: 0 !important; margin-bottom: 4px;
+    }
+    .st-key-navbar [data-testid="stPageLink-NavLink"] { padding: .5rem .85rem; }
+    .st-key-navbar [data-testid="stPageLink-NavLink"] p,
+    .st-key-navbar [data-testid="stPageLink-NavLink"] span { font-size: .95rem; }
+}
+
+/* ponsel: pil lebih rapat supaya muat 2-3 per baris tanpa scroll horizontal */
+@media (max-width: 480px) {
+    .st-key-navbar { padding: 8px 12px; }
+    .st-key-navbar [data-testid="stPageLink-NavLink"] { padding: .45rem .6rem; }
+    .st-key-navbar [data-testid="stPageLink-NavLink"] p,
+    .st-key-navbar [data-testid="stPageLink-NavLink"] span { font-size: .88rem; }
+}
 </style>
 """
 
