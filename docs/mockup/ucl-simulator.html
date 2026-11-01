@@ -1,43 +1,520 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UCL Simulator</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#FFFBEF}</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UCL Simulator</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            margin: 0;
+            background: #FFFBEF;
+        }
+    </style>
 </head>
 <body>
-<div style="background:#FFFBEF;font-family:Outfit,sans-serif;min-height:100vh">
-<div style="background:linear-gradient(90deg,#FFD21F,#FFB800);height:92px"><div style="max-width:1400px;margin:0 auto;padding:0 32px;height:92px;display:flex;align-items:center;gap:36px;overflow-x:auto">
-<div style="display:flex;align-items:center;gap:10px;color:#1A1400;flex:none"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#1A1400" stroke-width="2"></circle><polygon points="20,10 28,16 25,26 15,26 12,16" fill="#1A1400"></polygon></svg><span style="font:700 22px/1 Outfit,sans-serif;letter-spacing:.06em">UCL<br>SIMULATOR</span></div>
-<nav style="display:flex;gap:6px;align-items:center"><a href="#" style="text-decoration:none;white-space:nowrap;padding:12px 22px;border-radius:999px;font:500 18px Outfit,sans-serif;background:#1A1400;color:#FFD21F">Dashboard</a><a href="#" style="text-decoration:none;white-space:nowrap;padding:12px 22px;border-radius:999px;font:500 18px Outfit,sans-serif;color:#1A1400">Tabel</a><a href="#" style="text-decoration:none;white-space:nowrap;padding:12px 22px;border-radius:999px;font:500 18px Outfit,sans-serif;color:#1A1400">Simulator</a><a href="#" style="text-decoration:none;white-space:nowrap;padding:12px 22px;border-radius:999px;font:500 18px Outfit,sans-serif;color:#1A1400">Head-to-Head</a><a href="#" style="text-decoration:none;white-space:nowrap;padding:12px 22px;border-radius:999px;font:500 18px Outfit,sans-serif;color:#1A1400">Statistik</a><a href="#" style="text-decoration:none;white-space:nowrap;padding:12px 22px;border-radius:999px;font:500 18px Outfit,sans-serif;color:#1A1400">Metodologi</a></nav></div></div>
-<div style="max-width:1400px;margin:0 auto;padding:40px 32px;display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap">
-<main style="flex:1 1 640px;min-width:0;display:flex;flex-direction:column;gap:32px">
-<section><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px"><div style="font:600 32px Outfit,sans-serif;color:#10163A">Sekilas simulasi</div><div style="display:flex;gap:14px"><button aria-label="Sebelumnya" style="width:40px;height:40px;border-radius:50%;border:2px solid #9A8440;background:#fff;color:#9A8440;font:700 16px Outfit,sans-serif;cursor:pointer">‹</button><button aria-label="Berikutnya" style="width:40px;height:40px;border-radius:50%;border:2px solid #7A5200;background:#fff;color:#7A5200;font:700 16px Outfit,sans-serif;cursor:pointer">›</button></div></div>
-<div style="display:flex;gap:16px;overflow-x:auto;padding-bottom:20px;border-bottom:1px solid #EADFB8"><div style="flex:none;width:158px;height:198px;border-radius:16px;background:linear-gradient(160deg,#1A1400,#6B4F00);position:relative;overflow:hidden"><svg width="158" height="198" aria-hidden="true" style="position:absolute;inset:0"><circle cx="120" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle><circle cx="120" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle></svg><div style="position:absolute;left:14px;right:14px;bottom:14px;color:#fff;font:600 18px/1.15 Outfit,sans-serif">Peluang juara</div></div><div style="flex:none;width:158px;height:198px;border-radius:16px;background:linear-gradient(160deg,#2B2100,#8A6500);position:relative;overflow:hidden"><svg width="158" height="198" aria-hidden="true" style="position:absolute;inset:0"><circle cx="120" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle><circle cx="120" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle></svg><div style="position:absolute;left:14px;right:14px;bottom:14px;color:#fff;font:600 18px/1.15 Outfit,sans-serif">Top 8 &amp; playoff</div></div><div style="flex:none;width:158px;height:198px;border-radius:16px;background:linear-gradient(160deg,#3D2E00,#7A5800);position:relative;overflow:hidden"><svg width="158" height="198" aria-hidden="true" style="position:absolute;inset:0"><circle cx="120" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle><circle cx="120" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle></svg><div style="position:absolute;left:14px;right:14px;bottom:14px;color:#fff;font:600 18px/1.15 Outfit,sans-serif">Konvergensi</div></div><div style="flex:none;width:158px;height:198px;border-radius:16px;background:linear-gradient(160deg,#2B2100,#6B4F00);position:relative;overflow:hidden"><svg width="158" height="198" aria-hidden="true" style="position:absolute;inset:0"><circle cx="120" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle><circle cx="120" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle></svg><div style="position:absolute;left:14px;right:14px;bottom:14px;color:#fff;font:600 18px/1.15 Outfit,sans-serif">Head-to-head</div></div><div style="flex:none;width:158px;height:198px;border-radius:16px;background:linear-gradient(160deg,#3D2E00,#1A1400);position:relative;overflow:hidden"><svg width="158" height="198" aria-hidden="true" style="position:absolute;inset:0"><circle cx="120" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle><circle cx="120" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle></svg><div style="position:absolute;left:14px;right:14px;bottom:14px;color:#fff;font:600 18px/1.15 Outfit,sans-serif">Metodologi</div></div></div></section>
-<div style="border-radius:24px;background:linear-gradient(135deg,#FFD21F,#FFB800 70%,#FF9F0A);padding:36px;position:relative;overflow:hidden;border:6px solid transparent;background-clip:padding-box;box-shadow:0 0 0 3px #1A1400 inset">
-<div style="font:600 14px Outfit,sans-serif;color:#1A1400;letter-spacing:.14em;opacity:1">MUSIM 2026/27 · MATCHDAY 4 · 10.000 SIMULASI</div>
-<h1 style="margin:10px 0 8px;font:700 54px/1.05 Outfit,sans-serif;color:#1A1400;max-width:640px">Siapa juara Liga Champions musim ini?</h1>
-<p style="margin:0 0 24px;font:400 17px Outfit,sans-serif;color:#3D3000;max-width:600px">Prediksi berbasis simulasi Monte Carlo dengan gol tiap laga mengikuti distribusi Poisson.</p>
-<div style="display:flex;gap:16px;flex-wrap:wrap"><div style="flex:1;min-width:180px;background:rgba(255,255,255,.6);border:1px solid rgba(26,20,0,.2);border-radius:18px;padding:18px;color:#1A1400"><div style="display:flex;align-items:center;gap:10px;font:600 18px Outfit,sans-serif"><span style="width:38px;height:38px;border-radius:50%;background:#D0202A;color:#fff;font:700 12px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">ARS</span>Arsenal</div><div style="font:700 56px/1.1 Outfit,sans-serif;margin-top:14px">19.4%</div><div style="font:400 14px Outfit,sans-serif;color:#3D3000">peluang juara · ±0,8%</div></div><div style="flex:1;min-width:180px;background:rgba(255,255,255,.6);border:1px solid rgba(26,20,0,.2);border-radius:18px;padding:18px;color:#1A1400"><div style="display:flex;align-items:center;gap:10px;font:600 18px Outfit,sans-serif"><span style="width:38px;height:38px;border-radius:50%;background:#6CABDD;color:#fff;font:700 12px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">MCI</span>Man City</div><div style="font:700 56px/1.1 Outfit,sans-serif;margin-top:14px">15.2%</div><div style="font:400 14px Outfit,sans-serif;color:#3D3000">peluang juara · ±0,8%</div></div><div style="flex:1;min-width:180px;background:rgba(255,255,255,.6);border:1px solid rgba(26,20,0,.2);border-radius:18px;padding:18px;color:#1A1400"><div style="display:flex;align-items:center;gap:10px;font:600 18px Outfit,sans-serif"><span style="width:38px;height:38px;border-radius:50%;background:#C8102E;color:#fff;font:700 12px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">BAY</span>Bayern</div><div style="font:700 56px/1.1 Outfit,sans-serif;margin-top:14px">12.8%</div><div style="font:400 14px Outfit,sans-serif;color:#3D3000">peluang juara · ±0,8%</div></div></div>
-<button style="margin-top:24px;background:#1A1400;color:#FFD21F;border:0;border-radius:999px;padding:14px 28px;font:600 17px Outfit,sans-serif;min-height:48px">Jalankan simulasi ulang</button></div>
-<section style="background:#fff;border-radius:24px;padding:28px;box-shadow:0 1px 3px rgba(16,22,58,.08)"><div style="margin-bottom:18px"><div style="font:600 30px Outfit,sans-serif;color:#10163A">Peluang juara</div><div style="font:400 15px Outfit,sans-serif;color:#6B5A1E;margin-top:2px">8 tim dengan peluang tertinggi · data ilustrasi</div></div><div style="display:flex;flex-direction:column;gap:14px"><div style="display:flex;align-items:center;gap:14px"><span style="width:32px;height:32px;border-radius:50%;background:#D0202A;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">ARS</span><span style="width:110px;font:500 16px Outfit,sans-serif;color:#10163A">Arsenal</span><div style="flex:1;height:14px;background:#F6EDCB;border-radius:7px;overflow:hidden"><div style="width:89.23999999999998%;height:100%;background:linear-gradient(90deg,#FFC400,#FF9F0A)"></div></div><span style="width:56px;text-align:right;font:600 16px Outfit,sans-serif;color:#10163A">19.4%</span></div><div style="display:flex;align-items:center;gap:14px"><span style="width:32px;height:32px;border-radius:50%;background:#6CABDD;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">MCI</span><span style="width:110px;font:500 16px Outfit,sans-serif;color:#10163A">Man City</span><div style="flex:1;height:14px;background:#F6EDCB;border-radius:7px;overflow:hidden"><div style="width:69.91999999999999%;height:100%;background:linear-gradient(90deg,#FFC400,#FF9F0A)"></div></div><span style="width:56px;text-align:right;font:600 16px Outfit,sans-serif;color:#10163A">15.2%</span></div><div style="display:flex;align-items:center;gap:14px"><span style="width:32px;height:32px;border-radius:50%;background:#C8102E;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">BAY</span><span style="width:110px;font:500 16px Outfit,sans-serif;color:#10163A">Bayern</span><div style="flex:1;height:14px;background:#F6EDCB;border-radius:7px;overflow:hidden"><div style="width:58.879999999999995%;height:100%;background:linear-gradient(90deg,#FFC400,#FF9F0A)"></div></div><span style="width:56px;text-align:right;font:600 16px Outfit,sans-serif;color:#10163A">12.8%</span></div><div style="display:flex;align-items:center;gap:14px"><span style="width:32px;height:32px;border-radius:50%;background:#7A5C12;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">RMA</span><span style="width:110px;font:500 16px Outfit,sans-serif;color:#10163A">Real Madrid</span><div style="flex:1;height:14px;background:#F6EDCB;border-radius:7px;overflow:hidden"><div style="width:54.739999999999995%;height:100%;background:linear-gradient(90deg,#FFC400,#FF9F0A)"></div></div><span style="width:56px;text-align:right;font:600 16px Outfit,sans-serif;color:#10163A">11.9%</span></div><div style="display:flex;align-items:center;gap:14px"><span style="width:32px;height:32px;border-radius:50%;background:#1E3F8A;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">BAR</span><span style="width:110px;font:500 16px Outfit,sans-serif;color:#10163A">Barcelona</span><div style="flex:1;height:14px;background:#F6EDCB;border-radius:7px;overflow:hidden"><div style="width:48.76%;height:100%;background:linear-gradient(90deg,#FFC400,#FF9F0A)"></div></div><span style="width:56px;text-align:right;font:600 16px Outfit,sans-serif;color:#10163A">10.6%</span></div><div style="display:flex;align-items:center;gap:14px"><span style="width:32px;height:32px;border-radius:50%;background:#0A5CA8;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">INT</span><span style="width:110px;font:500 16px Outfit,sans-serif;color:#10163A">Inter</span><div style="flex:1;height:14px;background:#F6EDCB;border-radius:7px;overflow:hidden"><div style="width:41.85999999999999%;height:100%;background:linear-gradient(90deg,#FFC400,#FF9F0A)"></div></div><span style="width:56px;text-align:right;font:600 16px Outfit,sans-serif;color:#10163A">9.1%</span></div><div style="display:flex;align-items:center;gap:14px"><span style="width:32px;height:32px;border-radius:50%;background:#1B2A5E;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">PSG</span><span style="width:110px;font:500 16px Outfit,sans-serif;color:#10163A">PSG</span><div style="flex:1;height:14px;background:#F6EDCB;border-radius:7px;overflow:hidden"><div style="width:38.18%;height:100%;background:linear-gradient(90deg,#FFC400,#FF9F0A)"></div></div><span style="width:56px;text-align:right;font:600 16px Outfit,sans-serif;color:#10163A">8.3%</span></div><div style="display:flex;align-items:center;gap:14px"><span style="width:32px;height:32px;border-radius:50%;background:#B3122B;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">LIV</span><span style="width:110px;font:500 16px Outfit,sans-serif;color:#10163A">Liverpool</span><div style="flex:1;height:14px;background:#F6EDCB;border-radius:7px;overflow:hidden"><div style="width:32.199999999999996%;height:100%;background:linear-gradient(90deg,#FFC400,#FF9F0A)"></div></div><span style="width:56px;text-align:right;font:600 16px Outfit,sans-serif;color:#10163A">7.0%</span></div></div></section>
-<section style="background:#fff;border-radius:24px;padding:28px;box-shadow:0 1px 3px rgba(16,22,58,.08)"><div style="margin-bottom:18px"><div style="font:600 30px Outfit,sans-serif;color:#10163A">Tabel probabilitas</div><div style="font:400 15px Outfit,sans-serif;color:#6B5A1E;margin-top:2px">Peluang mencapai tiap babak · biru lebih pekat = peluang lebih besar</div></div><div style="overflow-x:auto"><table style="min-width:620px;width:100%;border-collapse:collapse"><tr><th></th><th style="padding:8px 4px;font:500 13px Outfit,sans-serif;color:#6B5A1E">Top 8</th><th style="padding:8px 4px;font:500 13px Outfit,sans-serif;color:#6B5A1E">Top 24</th><th style="padding:8px 4px;font:500 13px Outfit,sans-serif;color:#6B5A1E">R16</th><th style="padding:8px 4px;font:500 13px Outfit,sans-serif;color:#6B5A1E">QF</th><th style="padding:8px 4px;font:500 13px Outfit,sans-serif;color:#6B5A1E">SF</th><th style="padding:8px 4px;font:500 13px Outfit,sans-serif;color:#6B5A1E">Final</th><th style="padding:8px 4px;font:500 13px Outfit,sans-serif;color:#6B5A1E">Juara</th></tr><tr><td style="padding:5px 10px 5px 0;font:500 16px Outfit,sans-serif;color:#10163A;white-space:nowrap">Arsenal</td><td style="padding:5px"><div style="background:rgba(255,184,0,0.91);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">94%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.95);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">99%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.70);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">71%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.53);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">52%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.40);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">38%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.30);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">27%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.23);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">19%</div></td></tr><tr><td style="padding:5px 10px 5px 0;font:500 16px Outfit,sans-serif;color:#10163A;white-space:nowrap">Man City</td><td style="padding:5px"><div style="background:rgba(255,184,0,0.88);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">91%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.94);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">98%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.67);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">68%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.50);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">49%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.38);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">35%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.28);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">24%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.20);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">16%</div></td></tr><tr><td style="padding:5px 10px 5px 0;font:500 16px Outfit,sans-serif;color:#10163A;white-space:nowrap">Bayern</td><td style="padding:5px"><div style="background:rgba(255,184,0,0.85);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">88%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.93);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">97%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.64);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">64%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.46);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">44%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.33);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">30%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.24);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">20%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.18);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">13%</div></td></tr><tr><td style="padding:5px 10px 5px 0;font:500 16px Outfit,sans-serif;color:#10163A;white-space:nowrap">Real Madrid</td><td style="padding:5px"><div style="background:rgba(255,184,0,0.82);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">85%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.92);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">96%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.60);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">60%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.42);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">40%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.30);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">27%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.22);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">18%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.17);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">12%</div></td></tr><tr><td style="padding:5px 10px 5px 0;font:500 16px Outfit,sans-serif;color:#10163A;white-space:nowrap">Inter</td><td style="padding:5px"><div style="background:rgba(255,184,0,0.62);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">62%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.90);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">93%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.46);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">44%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.29);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">26%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.20);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">15%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.14);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">9%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.11);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">6%</div></td></tr><tr><td style="padding:5px 10px 5px 0;font:500 16px Outfit,sans-serif;color:#10163A;white-space:nowrap">PSG</td><td style="padding:5px"><div style="background:rgba(255,184,0,0.56);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">55%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.87);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">90%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.40);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">38%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.26);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">22%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.17);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">12%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.12);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">7%</div></td><td style="padding:5px"><div style="background:rgba(255,184,0,0.10);color:#10163A;border-radius:8px;padding:9px 0;text-align:center;font:600 15px Outfit,sans-serif">4%</div></td></tr></table></div></section>
-<section style="background:#fff;border-radius:24px;padding:28px;box-shadow:0 1px 3px rgba(16,22,58,.08)"><div style="margin-bottom:18px"><div style="font:600 30px Outfit,sans-serif;color:#10163A">Grafik konvergensi</div><div style="font:400 15px Outfit,sans-serif;color:#6B5A1E;margin-top:2px">Peluang juara Arsenal vs jumlah simulasi (Law of Large Numbers)</div></div>
-<svg viewBox="0 0 640 230" style="width:100%;height:auto" role="img" aria-label="Peluang juara menuju sekitar 19 persen, pita interval kepercayaan menyempit"><path d="M30 40 L120 70 L220 95 L330 108 L450 112 L610 113 L610 123 L450 128 L330 140 L220 165 L120 190 L30 200 Z" fill="#FFB800" opacity=".3"></path><polyline points="30 120 60 80 90 140 120 100 170 125 220 118 280 122 330 120 450 120 610 118" fill="none" stroke="#B37A00" stroke-width="3"></polyline><line x1="30" y1="120" x2="610" y2="120" stroke="#6B5A1E" stroke-dasharray="4 4"></line><text x="30" y="222" fill="#6B5A1E" font-size="13" font-family="Outfit">100 simulasi</text><text x="540" y="222" fill="#6B5A1E" font-size="13" font-family="Outfit">10.000</text></svg></section>
-</main>
-<aside style="flex:0 0 420px;max-width:100%;background:#fff;border-radius:28px;border:1px solid #F0E6C8;overflow:hidden">
-<div style="padding:32px 30px 28px"><div style="font:600 32px Outfit,sans-serif;color:#10163A;margin-bottom:22px">Informasi tim</div>
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><div style="font:500 26px Outfit,sans-serif;color:#10163A">Klasemen proyeksi</div><a href="#" style="font:500 17px Outfit,sans-serif;color:#7A5200;text-decoration:none">Lihat semua</a></div><div style="border:1px solid #F0E6C8;border-radius:20px;padding:8px 18px"><table style="width:100%;border-collapse:collapse"><tr style="color:#6B5A1E;font:400 14px Outfit,sans-serif"><th></th><th></th><th>Main</th><th>Poin</th></tr><tr style="border-top:0"><td style="padding:14px 0;color:#6B5A1E;font:400 15px Outfit,sans-serif;white-space:nowrap">1 &nbsp;<svg width="10" height="8" aria-label="naik" role="img"><polygon points="5,0 10,8 0,8" fill="#17802F"></polygon></svg></td><td style="padding:14px 6px"><div style="display:flex;align-items:center;gap:12px;font:500 17px Outfit,sans-serif;color:#10163A"><span style="width:32px;height:32px;border-radius:50%;background:#D0202A;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">ARS</span>Arsenal</div></td><td style="text-align:center;color:#10163A;font:400 16px Outfit,sans-serif">8</td><td style="text-align:center;color:#10163A;font:700 16px Outfit,sans-serif">22</td></tr><tr style="border-top:1px solid #F0E6C8"><td style="padding:14px 0;color:#6B5A1E;font:400 15px Outfit,sans-serif;white-space:nowrap">2 &nbsp;<svg width="10" height="8" aria-label="naik" role="img"><polygon points="5,0 10,8 0,8" fill="#17802F"></polygon></svg></td><td style="padding:14px 6px"><div style="display:flex;align-items:center;gap:12px;font:500 17px Outfit,sans-serif;color:#10163A"><span style="width:32px;height:32px;border-radius:50%;background:#6CABDD;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">MCI</span>Man City</div></td><td style="text-align:center;color:#10163A;font:400 16px Outfit,sans-serif">8</td><td style="text-align:center;color:#10163A;font:700 16px Outfit,sans-serif">19</td></tr><tr style="border-top:1px solid #F0E6C8"><td style="padding:14px 0;color:#6B5A1E;font:400 15px Outfit,sans-serif;white-space:nowrap">3 &nbsp;<svg width="10" height="8" aria-label="turun" role="img"><polygon points="0,0 10,0 5,8" fill="#C62828"></polygon></svg></td><td style="padding:14px 6px"><div style="display:flex;align-items:center;gap:12px;font:500 17px Outfit,sans-serif;color:#10163A"><span style="width:32px;height:32px;border-radius:50%;background:#C8102E;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">BAY</span>Bayern</div></td><td style="text-align:center;color:#10163A;font:400 16px Outfit,sans-serif">8</td><td style="text-align:center;color:#10163A;font:700 16px Outfit,sans-serif">18</td></tr><tr style="border-top:1px solid #F0E6C8"><td style="padding:14px 0;color:#6B5A1E;font:400 15px Outfit,sans-serif;white-space:nowrap">8 &nbsp;<svg width="10" height="8" aria-label="turun" role="img"><polygon points="0,0 10,0 5,8" fill="#C62828"></polygon></svg></td><td style="padding:14px 6px"><div style="display:flex;align-items:center;gap:12px;font:500 17px Outfit,sans-serif;color:#10163A"><span style="width:32px;height:32px;border-radius:50%;background:#1E3F8A;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">BAR</span>Barcelona</div></td><td style="text-align:center;color:#10163A;font:400 16px Outfit,sans-serif">8</td><td style="text-align:center;color:#10163A;font:700 16px Outfit,sans-serif">15</td></tr><tr style="border-top:1px solid #F0E6C8"><td style="padding:14px 0;color:#6B5A1E;font:400 15px Outfit,sans-serif;white-space:nowrap">9 &nbsp;<svg width="10" height="8" aria-label="naik" role="img"><polygon points="5,0 10,8 0,8" fill="#17802F"></polygon></svg></td><td style="padding:14px 6px"><div style="display:flex;align-items:center;gap:12px;font:500 17px Outfit,sans-serif;color:#10163A"><span style="width:32px;height:32px;border-radius:50%;background:#0A5CA8;color:#fff;font:700 10px Outfit,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:none">INT</span>Inter</div></td><td style="text-align:center;color:#10163A;font:400 16px Outfit,sans-serif">8</td><td style="text-align:center;color:#10163A;font:700 16px Outfit,sans-serif">14</td></tr></table></div>
-</div>
-<div style="padding:30px;border-top:1px solid #F0E6C8"><div style="font:600 32px Outfit,sans-serif;color:#10163A;margin-bottom:18px">Head-to-head</div>
-<div style="display:flex;justify-content:space-between;font:500 17px Outfit,sans-serif;color:#10163A;margin-bottom:14px"><span>Arsenal</span><span>Man City</span></div>
-<div style="display:flex;gap:10px"><div style="flex:1;background:#FFC400;border-radius:14px;padding:14px 8px;text-align:center"><div style="font:700 26px Outfit,sans-serif;color:#1A1400">41%</div><div style="font:400 13px Outfit,sans-serif;color:#1A1400">Menang</div></div><div style="flex:1;background:#F6EDCB;border-radius:14px;padding:14px 8px;text-align:center"><div style="font:700 26px Outfit,sans-serif;color:#10163A">26%</div><div style="font:400 13px Outfit,sans-serif;color:#10163A">Seri</div></div><div style="flex:1;background:#F6EDCB;border-radius:14px;padding:14px 8px;text-align:center"><div style="font:700 26px Outfit,sans-serif;color:#10163A">33%</div><div style="font:400 13px Outfit,sans-serif;color:#10163A">Menang</div></div></div>
-<div style="font:400 15px Outfit,sans-serif;color:#6B5A1E;margin-top:14px">Skor paling mungkin: 1-1 (11,2%)</div></div>
-<div style="padding:30px;border-top:1px solid #F0E6C8"><div style="font:600 32px Outfit,sans-serif;color:#10163A;margin-bottom:18px">Pengaturan simulasi</div><div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;font:500 15px Outfit,sans-serif;color:#10163A"><span>Jumlah simulasi</span><span style="color:#7A5200;font-weight:600">10.000</span></div><div style="height:6px;background:#F6EDCB;border-radius:3px;margin-top:8px"><div style="width:50%;height:100%;background:#FFB800;border-radius:3px"></div></div></div><div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;font:500 15px Outfit,sans-serif;color:#10163A"><span>Home advantage</span><span style="color:#7A5200;font-weight:600">1,25x</span></div><div style="height:6px;background:#F6EDCB;border-radius:3px;margin-top:8px"><div style="width:62%;height:100%;background:#FFB800;border-radius:3px"></div></div></div><div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;font:500 15px Outfit,sans-serif;color:#10163A"><span>Bobot form terbaru</span><span style="color:#7A5200;font-weight:600">40%</span></div><div style="height:6px;background:#F6EDCB;border-radius:3px;margin-top:8px"><div style="width:40%;height:100%;background:#FFB800;border-radius:3px"></div></div></div>
-<button style="width:100%;background:#FFC400;color:#1A1400;border:0;border-radius:999px;padding:14px;font:600 17px Outfit,sans-serif;min-height:48px">Jalankan ulang simulasi</button></div>
-</aside></div>
-<div style="text-align:center;padding:8px 32px 40px;font:400 14px Outfit,sans-serif;color:#6B5A1E">UCL Simulator · Tugas Probabilitas dan Statistika · Angka hanya ilustrasi</div>
-</div>
+    <div style="background: #FFFBEF; font-family: Outfit, sans-serif; min-height: 100vh;">
+        <header style="background: linear-gradient(90deg, #FFD21F, #FFB800); height: 92px;">
+            <div style="max-width: 1400px; margin: 0 auto; padding: 0 32px; height: 92px; display: flex; align-items: center; gap: 36px; overflow-x: auto;">
+                <div style="display: flex; align-items: center; gap: 10px; color: #1A1400; flex: none;">
+                    <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+                        <circle cx="20" cy="20" r="18" fill="none" stroke="#1A1400" stroke-width="2"></circle>
+                        <polygon points="20,10 28,16 25,26 15,26 12,16" fill="#1A1400"></polygon>
+                    </svg>
+                    <span style="font: 700 22px/1 Outfit, sans-serif; letter-spacing: .06em;">
+                        UCL<br>SIMULATOR
+                    </span>
+                </div>
+
+                <nav style="display: flex; gap: 6px; align-items: center;" aria-label="Navigasi utama">
+                    <a href="#" style="text-decoration: none; white-space: nowrap; padding: 12px 22px; border-radius: 999px; font: 500 18px Outfit, sans-serif; background: #1A1400; color: #FFD21F;">Dashboard</a>
+                    <a href="#" style="text-decoration: none; white-space: nowrap; padding: 12px 22px; border-radius: 999px; font: 500 18px Outfit, sans-serif; color: #1A1400;">Tabel</a>
+                    <a href="#" style="text-decoration: none; white-space: nowrap; padding: 12px 22px; border-radius: 999px; font: 500 18px Outfit, sans-serif; color: #1A1400;">Simulator</a>
+                    <a href="#" style="text-decoration: none; white-space: nowrap; padding: 12px 22px; border-radius: 999px; font: 500 18px Outfit, sans-serif; color: #1A1400;">Head-to-Head</a>
+                    <a href="#" style="text-decoration: none; white-space: nowrap; padding: 12px 22px; border-radius: 999px; font: 500 18px Outfit, sans-serif; color: #1A1400;">Statistik</a>
+                    <a href="#" style="text-decoration: none; white-space: nowrap; padding: 12px 22px; border-radius: 999px; font: 500 18px Outfit, sans-serif; color: #1A1400;">Metodologi</a>
+                </nav>
+            </div>
+        </header>
+
+        <div style="max-width: 1400px; margin: 0 auto; padding: 40px 32px; display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap;">
+            <main style="flex: 1 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 32px;">
+                <section>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                        <div style="font: 600 32px Outfit, sans-serif; color: #10163A;">Sekilas simulasi</div>
+                        <div style="display: flex; gap: 14px;">
+                            <button aria-label="Sebelumnya" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #9A8440; background: #fff; color: #9A8440; font: 700 16px Outfit, sans-serif; cursor: pointer;">‹</button>
+                            <button aria-label="Berikutnya" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #7A5200; background: #fff; color: #7A5200; font: 700 16px Outfit, sans-serif; cursor: pointer;">›</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 16px; overflow-x: auto; padding-bottom: 20px; border-bottom: 1px solid #EADFB8;">
+                        <div style="flex: none; width: 158px; height: 198px; border-radius: 16px; background: linear-gradient(160deg, #1A1400, #6B4F00); position: relative; overflow: hidden;">
+                            <svg width="158" height="198" aria-hidden="true" style="position: absolute; inset: 0;">
+                                <circle cx="120" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle>
+                                <circle cx="120" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle>
+                            </svg>
+                            <div style="position: absolute; left: 14px; right: 14px; bottom: 14px; color: #fff; font: 600 18px/1.15 Outfit, sans-serif;">Peluang juara</div>
+                        </div>
+                        <div style="flex: none; width: 158px; height: 198px; border-radius: 16px; background: linear-gradient(160deg, #2B2100, #8A6500); position: relative; overflow: hidden;">
+                            <svg width="158" height="198" aria-hidden="true" style="position: absolute; inset: 0;">
+                                <circle cx="120" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle>
+                                <circle cx="120" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle>
+                            </svg>
+                            <div style="position: absolute; left: 14px; right: 14px; bottom: 14px; color: #fff; font: 600 18px/1.15 Outfit, sans-serif;">Top 8 &amp; playoff</div>
+                        </div>
+                        <div style="flex: none; width: 158px; height: 198px; border-radius: 16px; background: linear-gradient(160deg, #3D2E00, #7A5800); position: relative; overflow: hidden;">
+                            <svg width="158" height="198" aria-hidden="true" style="position: absolute; inset: 0;">
+                                <circle cx="120" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle>
+                                <circle cx="120" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle>
+                            </svg>
+                            <div style="position: absolute; left: 14px; right: 14px; bottom: 14px; color: #fff; font: 600 18px/1.15 Outfit, sans-serif;">Konvergensi</div>
+                        </div>
+                        <div style="flex: none; width: 158px; height: 198px; border-radius: 16px; background: linear-gradient(160deg, #2B2100, #6B4F00); position: relative; overflow: hidden;">
+                            <svg width="158" height="198" aria-hidden="true" style="position: absolute; inset: 0;">
+                                <circle cx="120" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle>
+                                <circle cx="120" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle>
+                            </svg>
+                            <div style="position: absolute; left: 14px; right: 14px; bottom: 14px; color: #fff; font: 600 18px/1.15 Outfit, sans-serif;">Head-to-head</div>
+                        </div>
+                        <div style="flex: none; width: 158px; height: 198px; border-radius: 16px; background: linear-gradient(160deg, #3D2E00, #1A1400); position: relative; overflow: hidden;">
+                            <svg width="158" height="198" aria-hidden="true" style="position: absolute; inset: 0;">
+                                <circle cx="120" cy="50" r="46" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle>
+                                <circle cx="120" cy="50" r="22" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"></circle>
+                            </svg>
+                            <div style="position: absolute; left: 14px; right: 14px; bottom: 14px; color: #fff; font: 600 18px/1.15 Outfit, sans-serif;">Metodologi</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="border-radius: 24px; background: linear-gradient(135deg, #FFD21F, #FFB800 70%, #FF9F0A); padding: 36px; position: relative; overflow: hidden; border: 6px solid transparent; background-clip: padding-box; box-shadow: 0 0 0 3px #1A1400 inset;">
+                    <div style="font: 600 14px Outfit, sans-serif; color: #1A1400; letter-spacing: .14em; opacity: 1;">MUSIM 2026/27 · MATCHDAY 4 · 10.000 SIMULASI</div>
+                    <h1 style="margin: 10px 0 8px; font: 700 54px/1.05 Outfit, sans-serif; color: #1A1400; max-width: 640px;">Siapa juara Liga Champions musim ini?</h1>
+                    <p style="margin: 0 0 24px; font: 400 17px Outfit, sans-serif; color: #3D3000; max-width: 600px;">Prediksi berbasis simulasi Monte Carlo dengan gol tiap laga mengikuti distribusi Poisson.</p>
+
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 180px; background: rgba(255,255,255,.6); border: 1px solid rgba(26,20,0,.2); border-radius: 18px; padding: 18px; color: #1A1400;">
+                            <div style="display: flex; align-items: center; gap: 10px; font: 600 18px Outfit, sans-serif;">
+                                <span style="width: 38px; height: 38px; border-radius: 50%; background: #D0202A; color: #fff; font: 700 12px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">ARS</span>
+                                Arsenal
+                            </div>
+                            <div style="font: 700 56px/1.1 Outfit, sans-serif; margin-top: 14px;">19.4%</div>
+                            <div style="font: 400 14px Outfit, sans-serif; color: #3D3000;">peluang juara · ±0,8%</div>
+                        </div>
+
+                        <div style="flex: 1; min-width: 180px; background: rgba(255,255,255,.6); border: 1px solid rgba(26,20,0,.2); border-radius: 18px; padding: 18px; color: #1A1400;">
+                            <div style="display: flex; align-items: center; gap: 10px; font: 600 18px Outfit, sans-serif;">
+                                <span style="width: 38px; height: 38px; border-radius: 50%; background: #6CABDD; color: #fff; font: 700 12px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">MCI</span>
+                                Man City
+                            </div>
+                            <div style="font: 700 56px/1.1 Outfit, sans-serif; margin-top: 14px;">15.2%</div>
+                            <div style="font: 400 14px Outfit, sans-serif; color: #3D3000;">peluang juara · ±0,8%</div>
+                        </div>
+
+                        <div style="flex: 1; min-width: 180px; background: rgba(255,255,255,.6); border: 1px solid rgba(26,20,0,.2); border-radius: 18px; padding: 18px; color: #1A1400;">
+                            <div style="display: flex; align-items: center; gap: 10px; font: 600 18px Outfit, sans-serif;">
+                                <span style="width: 38px; height: 38px; border-radius: 50%; background: #C8102E; color: #fff; font: 700 12px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">BAY</span>
+                                Bayern
+                            </div>
+                            <div style="font: 700 56px/1.1 Outfit, sans-serif; margin-top: 14px;">12.8%</div>
+                            <div style="font: 400 14px Outfit, sans-serif; color: #3D3000;">peluang juara · ±0,8%</div>
+                        </div>
+                    </div>
+
+                    <button style="margin-top: 24px; background: #1A1400; color: #FFD21F; border: 0; border-radius: 999px; padding: 14px 28px; font: 600 17px Outfit, sans-serif; min-height: 48px;">Jalankan simulasi ulang</button>
+                </section>
+
+                <section style="background: #fff; border-radius: 24px; padding: 28px; box-shadow: 0 1px 3px rgba(16,22,58,.08);">
+                    <div style="margin-bottom: 18px;">
+                        <div style="font: 600 30px Outfit, sans-serif; color: #10163A;">Peluang juara</div>
+                        <div style="font: 400 15px Outfit, sans-serif; color: #6B5A1E; margin-top: 2px;">8 tim dengan peluang tertinggi · data ilustrasi</div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 14px;">
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #D0202A; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">ARS</span>
+                            <span style="width: 110px; font: 500 16px Outfit, sans-serif; color: #10163A;">Arsenal</span>
+                            <div style="flex: 1; height: 14px; background: #F6EDCB; border-radius: 7px; overflow: hidden;"><div style="width: 89.24%; height: 100%; background: linear-gradient(90deg, #FFC400, #FF9F0A);"></div></div>
+                            <span style="width: 56px; text-align: right; font: 600 16px Outfit, sans-serif; color: #10163A;">19.4%</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #6CABDD; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">MCI</span>
+                            <span style="width: 110px; font: 500 16px Outfit, sans-serif; color: #10163A;">Man City</span>
+                            <div style="flex: 1; height: 14px; background: #F6EDCB; border-radius: 7px; overflow: hidden;"><div style="width: 69.92%; height: 100%; background: linear-gradient(90deg, #FFC400, #FF9F0A);"></div></div>
+                            <span style="width: 56px; text-align: right; font: 600 16px Outfit, sans-serif; color: #10163A;">15.2%</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #C8102E; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">BAY</span>
+                            <span style="width: 110px; font: 500 16px Outfit, sans-serif; color: #10163A;">Bayern</span>
+                            <div style="flex: 1; height: 14px; background: #F6EDCB; border-radius: 7px; overflow: hidden;"><div style="width: 58.88%; height: 100%; background: linear-gradient(90deg, #FFC400, #FF9F0A);"></div></div>
+                            <span style="width: 56px; text-align: right; font: 600 16px Outfit, sans-serif; color: #10163A;">12.8%</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #7A5C12; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">RMA</span>
+                            <span style="width: 110px; font: 500 16px Outfit, sans-serif; color: #10163A;">Real Madrid</span>
+                            <div style="flex: 1; height: 14px; background: #F6EDCB; border-radius: 7px; overflow: hidden;"><div style="width: 54.74%; height: 100%; background: linear-gradient(90deg, #FFC400, #FF9F0A);"></div></div>
+                            <span style="width: 56px; text-align: right; font: 600 16px Outfit, sans-serif; color: #10163A;">11.9%</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #1E3F8A; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">BAR</span>
+                            <span style="width: 110px; font: 500 16px Outfit, sans-serif; color: #10163A;">Barcelona</span>
+                            <div style="flex: 1; height: 14px; background: #F6EDCB; border-radius: 7px; overflow: hidden;"><div style="width: 48.76%; height: 100%; background: linear-gradient(90deg, #FFC400, #FF9F0A);"></div></div>
+                            <span style="width: 56px; text-align: right; font: 600 16px Outfit, sans-serif; color: #10163A;">10.6%</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #0A5CA8; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">INT</span>
+                            <span style="width: 110px; font: 500 16px Outfit, sans-serif; color: #10163A;">Inter</span>
+                            <div style="flex: 1; height: 14px; background: #F6EDCB; border-radius: 7px; overflow: hidden;"><div style="width: 41.86%; height: 100%; background: linear-gradient(90deg, #FFC400, #FF9F0A);"></div></div>
+                            <span style="width: 56px; text-align: right; font: 600 16px Outfit, sans-serif; color: #10163A;">9.1%</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #1B2A5E; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">PSG</span>
+                            <span style="width: 110px; font: 500 16px Outfit, sans-serif; color: #10163A;">PSG</span>
+                            <div style="flex: 1; height: 14px; background: #F6EDCB; border-radius: 7px; overflow: hidden;"><div style="width: 38.18%; height: 100%; background: linear-gradient(90deg, #FFC400, #FF9F0A);"></div></div>
+                            <span style="width: 56px; text-align: right; font: 600 16px Outfit, sans-serif; color: #10163A;">8.3%</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #B3122B; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">LIV</span>
+                            <span style="width: 110px; font: 500 16px Outfit, sans-serif; color: #10163A;">Liverpool</span>
+                            <div style="flex: 1; height: 14px; background: #F6EDCB; border-radius: 7px; overflow: hidden;"><div style="width: 32.2%; height: 100%; background: linear-gradient(90deg, #FFC400, #FF9F0A);"></div></div>
+                            <span style="width: 56px; text-align: right; font: 600 16px Outfit, sans-serif; color: #10163A;">7.0%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="background: #fff; border-radius: 24px; padding: 28px; box-shadow: 0 1px 3px rgba(16,22,58,.08);">
+                    <div style="margin-bottom: 18px;">
+                        <div style="font: 600 30px Outfit, sans-serif; color: #10163A;">Tabel probabilitas</div>
+                        <div style="font: 400 15px Outfit, sans-serif; color: #6B5A1E; margin-top: 2px;">Peluang mencapai tiap babak · biru lebih pekat = peluang lebih besar</div>
+                    </div>
+
+                    <div style="overflow-x: auto;">
+                        <table style="min-width: 620px; width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th style="padding: 8px 4px; font: 500 13px Outfit, sans-serif; color: #6B5A1E;">Top 8</th>
+                                    <th style="padding: 8px 4px; font: 500 13px Outfit, sans-serif; color: #6B5A1E;">Top 24</th>
+                                    <th style="padding: 8px 4px; font: 500 13px Outfit, sans-serif; color: #6B5A1E;">R16</th>
+                                    <th style="padding: 8px 4px; font: 500 13px Outfit, sans-serif; color: #6B5A1E;">QF</th>
+                                    <th style="padding: 8px 4px; font: 500 13px Outfit, sans-serif; color: #6B5A1E;">SF</th>
+                                    <th style="padding: 8px 4px; font: 500 13px Outfit, sans-serif; color: #6B5A1E;">Final</th>
+                                    <th style="padding: 8px 4px; font: 500 13px Outfit, sans-serif; color: #6B5A1E;">Juara</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 5px 10px 5px 0; font: 500 16px Outfit, sans-serif; color: #10163A; white-space: nowrap;">Arsenal</td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.91); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">94%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.95); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">99%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.7); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">71%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.53); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">52%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.4); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">38%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.3); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">27%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.23); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">19%</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 10px 5px 0; font: 500 16px Outfit, sans-serif; color: #10163A; white-space: nowrap;">Man City</td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.88); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">91%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.94); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">98%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.67); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">68%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.5); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">49%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.38); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">35%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.28); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">24%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.2); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">16%</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 10px 5px 0; font: 500 16px Outfit, sans-serif; color: #10163A; white-space: nowrap;">Bayern</td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.85); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">88%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.93); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">97%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.64); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">64%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.46); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">44%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.33); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">30%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.24); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">20%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.18); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">13%</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 10px 5px 0; font: 500 16px Outfit, sans-serif; color: #10163A; white-space: nowrap;">Real Madrid</td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.82); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">85%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.92); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">96%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.6); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">60%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.42); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">40%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.3); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">27%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.22); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">18%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.17); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">12%</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 10px 5px 0; font: 500 16px Outfit, sans-serif; color: #10163A; white-space: nowrap;">Inter</td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.62); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">62%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.9); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">93%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.46); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">44%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.29); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">26%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.2); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">15%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.14); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">9%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.11); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">6%</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 10px 5px 0; font: 500 16px Outfit, sans-serif; color: #10163A; white-space: nowrap;">PSG</td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.56); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">55%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.87); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">90%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.4); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">38%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.26); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">22%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.17); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">12%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.12); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">7%</div>
+                                    </td>
+                                    <td style="padding: 5px;">
+                                        <div style="background: rgba(255,184,0,0.1); color: #10163A; border-radius: 8px; padding: 9px 0; text-align: center; font: 600 15px Outfit, sans-serif;">4%</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section style="background: #fff; border-radius: 24px; padding: 28px; box-shadow: 0 1px 3px rgba(16,22,58,.08);">
+                    <div style="margin-bottom: 18px;">
+                        <div style="font: 600 30px Outfit, sans-serif; color: #10163A;">Grafik konvergensi</div>
+                        <div style="font: 400 15px Outfit, sans-serif; color: #6B5A1E; margin-top: 2px;">Peluang juara Arsenal vs jumlah simulasi (Law of Large Numbers)</div>
+                    </div>
+                    <svg viewBox="0 0 640 230" style="width: 100%; height: auto;" role="img" aria-label="Peluang juara menuju sekitar 19 persen, pita interval kepercayaan menyempit">
+                        <path d="M30 40 L120 70 L220 95 L330 108 L450 112 L610 113 L610 123 L450 128 L330 140 L220 165 L120 190 L30 200 Z" fill="#FFB800" opacity=".3"></path>
+                        <polyline points="30 120 60 80 90 140 120 100 170 125 220 118 280 122 330 120 450 120 610 118" fill="none" stroke="#B37A00" stroke-width="3"></polyline>
+                        <line x1="30" y1="120" x2="610" y2="120" stroke="#6B5A1E" stroke-dasharray="4 4"></line>
+                        <text x="30" y="222" fill="#6B5A1E" font-size="13" font-family="Outfit">100 simulasi</text>
+                        <text x="540" y="222" fill="#6B5A1E" font-size="13" font-family="Outfit">10.000</text>
+                    </svg>
+                </section>
+            </main>
+
+            <aside style="flex: 0 0 420px; max-width: 100%; background: #fff; border-radius: 28px; border: 1px solid #F0E6C8; overflow: hidden;">
+                <section style="padding: 32px 30px 28px;">
+                    <div style="font: 600 32px Outfit, sans-serif; color: #10163A; margin-bottom: 22px;">Informasi tim</div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                        <div style="font: 500 26px Outfit, sans-serif; color: #10163A;">Klasemen proyeksi</div>
+                        <a href="#" style="font: 500 17px Outfit, sans-serif; color: #7A5200; text-decoration: none;">Lihat semua</a>
+                    </div>
+
+                    <div style="border: 1px solid #F0E6C8; border-radius: 20px; padding: 8px 18px;">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="color: #6B5A1E; font: 400 14px Outfit, sans-serif;">
+                                    <th></th>
+                                    <th></th>
+                                    <th>Main</th>
+                                    <th>Poin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-top: 0;">
+                                    <td style="padding: 14px 0; color: #6B5A1E; font: 400 15px Outfit, sans-serif; white-space: nowrap;">1 &nbsp;<svg width="10" height="8" aria-label="naik" role="img"><polygon points="5,0 10,8 0,8" fill="#17802F"></polygon></svg></td>
+                                    <td style="padding: 14px 6px;">
+                                        <div style="display: flex; align-items: center; gap: 12px; font: 500 17px Outfit, sans-serif; color: #10163A;">
+                                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #D0202A; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">ARS</span>
+                                            Arsenal
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; color: #10163A; font: 400 16px Outfit, sans-serif;">8</td>
+                                    <td style="text-align: center; color: #10163A; font: 700 16px Outfit, sans-serif;">22</td>
+                                </tr>
+                                <tr style="border-top: 1px solid #F0E6C8;">
+                                    <td style="padding: 14px 0; color: #6B5A1E; font: 400 15px Outfit, sans-serif; white-space: nowrap;">2 &nbsp;<svg width="10" height="8" aria-label="naik" role="img"><polygon points="5,0 10,8 0,8" fill="#17802F"></polygon></svg></td>
+                                    <td style="padding: 14px 6px;">
+                                        <div style="display: flex; align-items: center; gap: 12px; font: 500 17px Outfit, sans-serif; color: #10163A;">
+                                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #6CABDD; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">MCI</span>
+                                            Man City
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; color: #10163A; font: 400 16px Outfit, sans-serif;">8</td>
+                                    <td style="text-align: center; color: #10163A; font: 700 16px Outfit, sans-serif;">19</td>
+                                </tr>
+                                <tr style="border-top: 1px solid #F0E6C8;">
+                                    <td style="padding: 14px 0; color: #6B5A1E; font: 400 15px Outfit, sans-serif; white-space: nowrap;">3 &nbsp;<svg width="10" height="8" aria-label="turun" role="img"><polygon points="0,0 10,0 5,8" fill="#C62828"></polygon></svg></td>
+                                    <td style="padding: 14px 6px;">
+                                        <div style="display: flex; align-items: center; gap: 12px; font: 500 17px Outfit, sans-serif; color: #10163A;">
+                                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #C8102E; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">BAY</span>
+                                            Bayern
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; color: #10163A; font: 400 16px Outfit, sans-serif;">8</td>
+                                    <td style="text-align: center; color: #10163A; font: 700 16px Outfit, sans-serif;">18</td>
+                                </tr>
+                                <tr style="border-top: 1px solid #F0E6C8;">
+                                    <td style="padding: 14px 0; color: #6B5A1E; font: 400 15px Outfit, sans-serif; white-space: nowrap;">8 &nbsp;<svg width="10" height="8" aria-label="turun" role="img"><polygon points="0,0 10,0 5,8" fill="#C62828"></polygon></svg></td>
+                                    <td style="padding: 14px 6px;">
+                                        <div style="display: flex; align-items: center; gap: 12px; font: 500 17px Outfit, sans-serif; color: #10163A;">
+                                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #1E3F8A; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">BAR</span>
+                                            Barcelona
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; color: #10163A; font: 400 16px Outfit, sans-serif;">8</td>
+                                    <td style="text-align: center; color: #10163A; font: 700 16px Outfit, sans-serif;">15</td>
+                                </tr>
+                                <tr style="border-top: 1px solid #F0E6C8;">
+                                    <td style="padding: 14px 0; color: #6B5A1E; font: 400 15px Outfit, sans-serif; white-space: nowrap;">9 &nbsp;<svg width="10" height="8" aria-label="naik" role="img"><polygon points="5,0 10,8 0,8" fill="#17802F"></polygon></svg></td>
+                                    <td style="padding: 14px 6px;">
+                                        <div style="display: flex; align-items: center; gap: 12px; font: 500 17px Outfit, sans-serif; color: #10163A;">
+                                            <span style="width: 32px; height: 32px; border-radius: 50%; background: #0A5CA8; color: #fff; font: 700 10px Outfit, sans-serif; display: inline-flex; align-items: center; justify-content: center; flex: none;">INT</span>
+                                            Inter
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; color: #10163A; font: 400 16px Outfit, sans-serif;">8</td>
+                                    <td style="text-align: center; color: #10163A; font: 700 16px Outfit, sans-serif;">14</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section style="padding: 30px; border-top: 1px solid #F0E6C8;">
+                    <div style="font: 600 32px Outfit, sans-serif; color: #10163A; margin-bottom: 18px;">Head-to-head</div>
+                    <div style="display: flex; justify-content: space-between; font: 500 17px Outfit, sans-serif; color: #10163A; margin-bottom: 14px;">
+                        <span>Arsenal</span>
+                        <span>Man City</span>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex: 1; background: #FFC400; border-radius: 14px; padding: 14px 8px; text-align: center;">
+                            <div style="font: 700 26px Outfit, sans-serif; color: #1A1400;">41%</div>
+                            <div style="font: 400 13px Outfit, sans-serif; color: #1A1400;">Menang</div>
+                        </div>
+                        <div style="flex: 1; background: #F6EDCB; border-radius: 14px; padding: 14px 8px; text-align: center;">
+                            <div style="font: 700 26px Outfit, sans-serif; color: #10163A;">26%</div>
+                            <div style="font: 400 13px Outfit, sans-serif; color: #10163A;">Seri</div>
+                        </div>
+                        <div style="flex: 1; background: #F6EDCB; border-radius: 14px; padding: 14px 8px; text-align: center;">
+                            <div style="font: 700 26px Outfit, sans-serif; color: #10163A;">33%</div>
+                            <div style="font: 400 13px Outfit, sans-serif; color: #10163A;">Menang</div>
+                        </div>
+                    </div>
+                    <div style="font: 400 15px Outfit, sans-serif; color: #6B5A1E; margin-top: 14px;">Skor paling mungkin: 1-1 (11,2%)</div>
+                </section>
+
+                <section style="padding: 30px; border-top: 1px solid #F0E6C8;">
+                    <div style="font: 600 32px Outfit, sans-serif; color: #10163A; margin-bottom: 18px;">Pengaturan simulasi</div>
+
+                    <div style="margin-bottom: 16px;">
+                        <div style="display: flex; justify-content: space-between; font: 500 15px Outfit, sans-serif; color: #10163A;">
+                            <span>Jumlah simulasi</span>
+                            <span style="color: #7A5200; font-weight: 600;">10.000</span>
+                        </div>
+                        <div style="height: 6px; background: #F6EDCB; border-radius: 3px; margin-top: 8px;">
+                            <div style="width: 50%; height: 100%; background: #FFB800; border-radius: 3px;"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <div style="display: flex; justify-content: space-between; font: 500 15px Outfit, sans-serif; color: #10163A;">
+                            <span>Home advantage</span>
+                            <span style="color: #7A5200; font-weight: 600;">1,25x</span>
+                        </div>
+                        <div style="height: 6px; background: #F6EDCB; border-radius: 3px; margin-top: 8px;">
+                            <div style="width: 62%; height: 100%; background: #FFB800; border-radius: 3px;"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <div style="display: flex; justify-content: space-between; font: 500 15px Outfit, sans-serif; color: #10163A;">
+                            <span>Bobot form terbaru</span>
+                            <span style="color: #7A5200; font-weight: 600;">40%</span>
+                        </div>
+                        <div style="height: 6px; background: #F6EDCB; border-radius: 3px; margin-top: 8px;">
+                            <div style="width: 40%; height: 100%; background: #FFB800; border-radius: 3px;"></div>
+                        </div>
+                    </div>
+
+                    <button style="width: 100%; background: #FFC400; color: #1A1400; border: 0; border-radius: 999px; padding: 14px; font: 600 17px Outfit, sans-serif; min-height: 48px;">Jalankan ulang simulasi</button>
+                </section>
+            </aside>
+        </div>
+
+        <footer style="text-align: center; padding: 8px 32px 40px; font: 400 14px Outfit, sans-serif; color: #6B5A1E;">
+            UCL Simulator · Tugas Probabilitas dan Statistika · Angka hanya ilustrasi
+        </footer>
+    </div>
 </body>
 </html>
