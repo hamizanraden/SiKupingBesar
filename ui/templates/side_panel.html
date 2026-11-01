@@ -1,0 +1,40 @@
+{% from "badge.html" import team_badge %}
+<div class="rounded-[28px] bg-white border border-[#F0E6C8] overflow-hidden text-[#1A1400]">
+  <div class="p-7">
+    <div class="text-3xl font-semibold mb-5">Informasi tim</div>
+    <div class="text-2xl font-medium mb-3">Klasemen proyeksi</div>
+    <div class="border border-[#F0E6C8] rounded-2xl px-4 py-1">
+      <table class="w-full text-[15px]">
+        <thead><tr class="text-sm text-[#6B5A1E]"><th class="text-left py-2 font-normal">#</th><th></th><th class="py-2 font-normal">Poin</th><th class="py-2 font-normal text-right">Top 8</th></tr></thead>
+        <tbody>
+        {% for r in rows %}
+          <tr class="border-t border-[#F0E6C8]">
+            <td class="py-3 text-[#6B5A1E] w-6">{{ loop.index }}</td>
+            <td class="py-3"><div class="flex items-center gap-3 font-medium">{{ team_badge(r["Tim"], 30) }}{{ r["Tim"] }}</div></td>
+            <td class="py-3 text-center font-bold">{{ "%.1f"|format(r["Rata-rata poin"]) }}</td>
+            <td class="py-3 text-right"><span class="inline-block rounded-full px-2.5 py-0.5 text-sm font-semibold" style="background:rgba(255,184,0,{{ 0.15 + 0.85*r['Top 8'] }})">{{ "%.0f"|format(r["Top 8"]*100) }}%</span></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="p-7 border-t border-[#F0E6C8]">
+    <div class="text-3xl font-semibold mb-4">Head-to-head</div>
+    <div class="flex justify-between font-medium mb-3"><span>{{ h2h.home }}</span><span>{{ h2h.away }}</span></div>
+    <div class="flex gap-2.5">
+      <div class="flex-1 rounded-xl py-3 text-center" style="background:#FFC400"><div class="text-2xl font-bold">{{ "%.0f"|format(h2h.w*100) }}%</div><div class="text-xs">Menang</div></div>
+      <div class="flex-1 rounded-xl py-3 text-center bg-[#F6EDCB]"><div class="text-2xl font-bold">{{ "%.0f"|format(h2h.d*100) }}%</div><div class="text-xs">Seri</div></div>
+      <div class="flex-1 rounded-xl py-3 text-center bg-[#F6EDCB]"><div class="text-2xl font-bold">{{ "%.0f"|format(h2h.l*100) }}%</div><div class="text-xs">Menang</div></div>
+    </div>
+    <div class="text-sm text-[#6B5A1E] mt-3">Skor paling mungkin: {{ h2h.score }} ({{ "%.1f"|format(h2h.score_p*100) }}%)</div>
+  </div>
+
+  <div class="p-7 border-t border-[#F0E6C8]">
+    <div class="text-3xl font-semibold mb-4">Pengaturan simulasi</div>
+    {% for label, value in settings %}
+    <div class="flex justify-between py-2 border-b border-[#F6EDCB] last:border-0"><span>{{ label }}</span><span class="font-semibold text-[#7A5200]">{{ value }}</span></div>
+    {% endfor %}
+  </div>
+</div>

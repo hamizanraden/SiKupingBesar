@@ -4,3 +4,9 @@ backgroundColor = "#FFFBEF"
 secondaryBackgroundColor = "#FFF1C2"
 textColor = "#1A1400"
 font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
+
+[ui]
+hideTopBar = true

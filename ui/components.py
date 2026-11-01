@@ -33,5 +33,11 @@ def html(template, **ctx):
     return _HEAD + _ENV.get_template(template).render(**ctx)
 
 def render(template, height=300, **ctx):
-    import streamlit.components.v1 as components
-    components.html(html(template, **ctx), height=height, scrolling=False)
+    """Render HTML + Tailwind di iframe. st.iframe (Streamlit >= 1.66) menggantikan components.html yang usang."""
+    import streamlit as st
+    markup = html(template, **ctx)
+    if hasattr(st, "iframe"):
+        st.iframe(markup, height=height)
+    else:                               # cadangan untuk Streamlit lama
+        import streamlit.components.v1 as components
+        components.html(markup, height=height, scrolling=False)
